@@ -1,0 +1,166 @@
+#afterAnim{
+  width: 100%;
+  height: 20em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+.animation {
+  width: 20%;
+  height: 20%;
+  min-width: 200px;
+  min-height: 200px;
+  background-color: rgb(1, 9, 32);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  border-radius: 10px;
+  
+}
+#blockanim{
+  width: 50%;
+  height: 70%;
+  margin-top:10%;
+  display: flex;
+}
+.anim {
+  width: 60px;
+  height: 60px;
+  border: 4px solid transparent;
+  border-radius: 50%;
+}
+.anim:nth-child(2) {
+  position: absolute;
+  margin-right: 2%;
+  border-top: 4px solid rgba(93, 133, 243, 0.932);
+  animation: an2 1s ease-in infinite;
+  /* animation-delay:0.5s; */
+}
+
+@keyframes an2 {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(90deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  75% {
+    transform: rotate(270deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.anim:nth-child(2)::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  top: 4px;
+  left: 40px;
+  background-color: rgb(4, 153, 223);
+  border-radius: 50px;
+  box-shadow: 0 0 10px 10px rgb(12, 190, 245), 0 0 50px 10px rgb(195, 242, 248);
+}
+
+.anim:nth-child(1) {
+  margin-top: 10%;
+  border-top: 4px solid rgb(252, 39, 206);
+  animation: an3 1s ease-in infinite;
+  /* animation-delay:0.4s; */
+}
+
+.anim:nth-child(1)::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  top: 16%;
+  left: 0%;
+  background-color: rgba(255, 3, 200, 0.76);
+  border-radius: 50%;
+  box-shadow: 0px 0px 10px 10px rgb(233, 141, 252),
+    0px 0px 50px 15px rgb(252, 221, 255);
+}
+
+.anim:nth-child(3) {
+  margin-top: 10%;
+  border-top: 4px solid rgba(6, 180, 0, 0.836);
+  animation: an3 1s ease-in infinite;
+}
+@keyframes an3 {
+  0% {
+    transform: rotate(360deg);
+  }
+  25% {
+    transform: rotate(270deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  75% {
+    transform: rotate(90deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+.anim:nth-child(3)::before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  top: 10;
+  left: 30;
+  border-radius: 50px;
+  background-color: rgba(6, 172, 0, 0.918);
+  box-shadow: 0px 0px 10px 10px rgb(96, 252, 82),
+    0px 0px 50px 15px rgb(200, 255, 169);
+}
+#loading {
+  /* position: absolute; */
+  /* margin-top: 80%; */
+  color: white;
+  font-size: 25px;
+}
+
+#team {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: 30% 30% 30%;
+  gap: 15px;
+  justify-content: center;
+}
+.cart {
+  border: 2px solid black;
+  border-radius: 10px;
+  display: block;
+  justify-items: stretch;
+}
+.name {
+  font-size: 0.8em;
+  display: flex;
+  justify-content: center;
+}
+.job {
+  display: flex;
+  justify-content: center;
+}
+.skills {
+  display: flex;
+  justify-content: center;
+}
+.imges {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+img {
+  border-radius: 10px;
+}

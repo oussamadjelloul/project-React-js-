@@ -1,0 +1,201 @@
+.title {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+h1 {
+  color: rgb(96, 181, 250);
+}
+#toDo {
+  width: 70vw;
+  height: 5em;
+  display: flex;
+  margin: auto;
+  margin-top: 1rem;
+  align-items: stretch;
+  gap: 10%;
+  position: relative;
+}
+input[type="text"] {
+  width: 80%;
+  min-width: 100px;
+  min-height: 50px;
+  border: 2px solid white;
+  border-radius: 15px;
+  padding: 10px;
+  outline: none;
+  position: relative;
+}
+#formd {
+  min-width: 300px;
+  min-height: 100px;
+  width: 70vw;
+  height: 2em;
+  display: flex;
+  margin: auto;
+  margin-top: 2rem;
+  align-items: stretch;
+  gap: 10%;
+}
+
+
+input[type="submit"] {
+  border: 2px solid white;
+  background-color: rgb(56, 85, 99);
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  min-width: 40px;
+  min-height: 50px;
+  width: 20%;
+}
+@media (max-width: 400px) {
+  html {
+    font-size: 10px;
+  }
+}
+
+
+#tasks > div {
+  width: 75vw;
+  height: 16em;
+  min-width: 400px;
+  min-height: 10em;
+  background-color: white;
+  border: 2px solid rgb(247, 208, 36);
+  border-radius: 15px;
+  position: relative;
+  margin: auto;
+  margin-top: 5em;
+  overflow: auto;
+  overflow-y: auto;
+}
+
+
+#tasks {
+  width: 80vw;
+  height: 20em;
+  min-width: 400px;
+  min-height: 10em;
+  position: relative;
+  margin: auto;
+  margin-top: -10px;
+}
+
+#tasks::after {
+  content: attr(counter);
+  width: 21px;
+  height: 22px;
+  left: 2.5%;
+  font-size: 1.5em;
+  padding: 5px;
+  font-weight: 600;
+  top: -6%;
+  position: absolute;
+  text-align: center;
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+}
+
+
+
+.task {
+  width: 70vw;
+  height: 3em;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 10%;
+  position: relative;
+}
+.titleTask {
+  width: 10%;
+  height: 3em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.butunTaks {
+  width: 20%;
+  height: 3em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10%;
+}
+.butunTaks > button {
+  width: 100%;
+  height: 2em;
+  border: 2px solid black;
+  border-radius: 10px;
+  /* padding:10px; */
+}
+
+.butunTaks > button:nth-child(1) {
+  background-color: rgb(46, 197, 46);
+  color: white;
+}
+
+.butunTaks > button:nth-child(2) {
+  background-color: rgb(238, 103, 94);
+  color: white;
+}
+
+#local {
+  width: 80vw;
+  height: 5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  margin-top: 20px;
+}
+
+#local > button {
+  width: 30%;
+  height: 3em;
+  border: 5px solid white;
+  border-radius: 10px;
+  background-color: rgb(79, 140, 180);
+  color: white;
+  font-size: 1.5em;
+  min-width: 300px;
+}
+
+.true::after {
+  content: "";
+  width: 45vw;
+  height: 3px;
+  position: absolute;
+  top: 20px;
+
+  background-color: rgb(73, 70, 70);
+}
+
+.errr::after {
+  content: "write your task";
+  position: absolute;
+  width: 17%;
+  padding: 5px;
+  text-align: center;
+  height: 30%;
+  top: -10px;
+  background-color: red;
+  color: white;
+  border-radius: 15px;
+  animation: errs 1.5s ease-in-out forwards;
+  font-weight: 400;
+  font-size: 1em;
+  min-width: 150px;
+}
+
+@keyframes errs {
+  0% {
+    transform: translateY(60%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
